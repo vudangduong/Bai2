@@ -44,11 +44,13 @@ const cart = (state = initialState, action) => {
       return initialState
     case CHECKOUT_FAILURE:
       return action.cart
-    default:
+    case ADD_TO_CART:
       return {
         addedIds: addedIds(state.addedIds, action),
         quantityById: quantityById(state.quantityById, action)
       }
+    default:
+      return state;
   }
 }
 

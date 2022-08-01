@@ -23,16 +23,13 @@ const byId = (state = {}, action) => {
           return obj
         }, {})
       }
-    default:
+    case ADD_TO_CART:
       const { productId } = action
-      if (productId) {
-        //update quantity of product
-        //checkout also come here
-        return {
-          ...state,
-          [productId]: products(state[productId], action)
-        }
+      return {
+        ...state,
+        [productId]: products(state[productId], action)
       }
+    default:
       return state
   }
 }
