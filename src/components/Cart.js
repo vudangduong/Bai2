@@ -26,17 +26,17 @@ const Cart  = () => {
       />
     )
   ) : (
-    <em>Please add some products to cart.</em>
+    <em>Thêm Sản Phẩm Vào Giỏ Hàng</em>
   )
 
   return (
     <div>
-      <h3>Your Cart</h3>
+      <h3>Giỏ Hàng</h3>
       <div>{nodes}</div>
-      <p>Total: &#36;{total}</p>
+      <p>Tổng Tiền: &#36;{total}</p>
       <button onClick={handleCheckout}
         disabled={hasProducts ? '' : 'disabled'}>
-        Checkout
+        Thanh Toán
       </button>
     </div>
   )
